@@ -1,0 +1,25 @@
+{
+  "name": "edu-bot-blockly",
+  "version": "1.0.0",
+  "description": "The main source code of Edu-Bot blockly system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/preetvadaliya/Edu-Bot-Blockly.git"
+  },
+  "keywords": [
+    "Blockly"
+  ],
+  "author": "Preet P. Vadaliya",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/preetvadaliya/Edu-Bot-Blockly/issues"
+  },
+  "homepage": "https://github.com/preetvadaliya/Edu-Bot-Blockly#readme",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}
