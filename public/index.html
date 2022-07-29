@@ -1,0 +1,187 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Edu-bot Blockly</title>
+</head>
+
+<body>
+	<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox"
+		style="display: none">
+		<category name="Movement">
+			<block type="edu_bot_movement">
+				<field name="OP0">F</field>
+			</block>
+			<block type="edu_bot_movement">
+				<field name="OP0">B</field>
+			</block>
+			<block type="edu_bot_movement">
+				<field name="OP0">L</field>
+			</block>
+			<block type="edu_bot_movement">
+				<field name="OP0">R</field>
+			</block>
+			<block type="edu_bot_spacial_movement">
+				<field name="OP0">4</field>
+			</block>
+			<block type="edu_bot_spacial_movement">
+				<field name="OP0">3</field>
+			</block>
+			<block type="edu_bot_spacial_movement">
+				<field name="OP0">6</field>
+			</block>
+			<block type="edu_bot_spacial_movement">
+				<field name="OP0">5</field>
+			</block>
+		</category>
+		<category name="Infinite Movement">
+			<block type="edu_bot_infinite_movement">
+				<field name="OP0">1</field>
+				<field name="OP1">200</field>
+			</block>
+			<block type="edu_bot_infinite_movement">
+				<field name="OP0">2</field>
+				<field name="OP1">200</field>
+			</block>
+			<block type="edu_bot_infinite_movement">
+				<field name="OP0">3</field>
+				<field name="OP1">200</field>
+			</block>
+			<block type="edu_bot_infinite_movement">
+				<field name="OP0">4</field>
+				<field name="OP1">200</field>
+			</block>
+			<block type="edu_bot_infinite_movement">
+				<field name="OP0">5</field>
+				<field name="OP1">200</field>
+			</block>
+			<block type="edu_bot_infinite_movement">
+				<field name="OP0">6</field>
+				<field name="OP1">200</field>
+			</block>
+			<block type="edu_bot_infinite_movement">
+				<field name="OP0">7</field>
+				<field name="OP1">200</field>
+			</block>
+			<block type="edu_bot_infinite_movement">
+				<field name="OP0">8</field>
+				<field name="OP1">200</field>
+			</block>
+			<block type="edu_bot_infinite_movement">
+				<field name="OP0">9</field>
+				<field name="OP1">200</field>
+			</block>
+			<block type="edu_bot_infinite_movement">
+				<field name="OP0">0</field>
+			</block>
+		</category>
+		<category name="Angular Movement">
+			<block type="edu_bot_angular_movement">
+				<field name="OP0">F</field>
+				<field name="INPUT0">30</field>
+				<field name="OP1">R</field>
+				<field name="OP2">1</field>
+				<field name="OP3">65</field>
+			</block>
+			<block type="edu_bot_angular_movement">
+				<field name="OP0">F</field>
+				<field name="INPUT0">30</field>
+				<field name="OP1">L</field>
+				<field name="OP2">1</field>
+				<field name="OP3">65</field>
+			</block>
+			<block type="edu_bot_angular_movement">
+				<field name="OP0">B</field>
+				<field name="INPUT0">30</field>
+				<field name="OP1">R</field>
+				<field name="OP2">1</field>
+				<field name="OP3">65</field>
+			</block>
+			<block type="edu_bot_angular_movement">
+				<field name="OP0">B</field>
+				<field name="INPUT0">30</field>
+				<field name="OP1">L</field>
+				<field name="OP2">1</field>
+				<field name="OP3">65</field>
+			</block>
+		</category>
+		<category name="Controls">
+			<block type="edu_bot_control_loop"> </block>
+		</category>
+		<category name="Light">
+			<block type="edu_bot_light"> </block>
+			<block type="edu_bot_light_off"> </block>
+			<block type="edu_bot_light_with_time"> </block>
+			<block type="edu_bot_light_change_with_time"> </block>
+			<block type="edu_bot_light_blink"> </block>
+		</category>
+		<category name="Sensor">
+			<block type="edu_bot_controls_wait_until"> </block>
+			<block type="edu_bot_color_check"> </block>
+			<block type="edu_bot_distance_check"> </block>
+		</category>
+		<category name="Operators">
+			<block type="edu_bot_operators">
+				<field name="OP">1</field>
+			</block>
+			<block type="edu_bot_operators">
+				<field name="OP">2</field>
+			</block>
+			<block type="edu_bot_operators">
+				<field name="OP">3</field>
+			</block>
+		</category>
+		<category name="Events">
+			<block type="edu_bot_clap_detection"> </block>
+		</category>
+		<category name="Sounds">
+			<block type="edu_bot_sounds">
+				<field name="OP">1</field>
+			</block>
+			<block type="edu_bot_sounds">
+				<field name="OP">2</field>
+			</block>
+			<block type="edu_bot_sounds">
+				<field name="OP">3</field>
+			</block>
+		</category>
+	</xml>
+
+	<div id="blockly-div"></div>
+
+	<script src="https://unpkg.com/blockly/blockly.min.js"></script>
+	<script src="../bundle/blockly-all.js"></script>
+	<script>
+		var toolbox = document.getElementById('toolbox');
+		var options = {
+			toolbox: toolbox,
+			collapse: true,
+			comments: true,
+			disable: true,
+			maxBlocks: Infinity,
+			trashcan: true,
+			horizontalLayout: false,
+			toolboxPosition: 'start',
+			css: true,
+			media: 'https://blockly-demo.appspot.com/static/media/',
+			rtl: false,
+			scrollbars: true,
+			sounds: true,
+			oneBasedIndex: true,
+			renderer: 'zelos',
+		};
+		var workspace = Blockly.inject('blockly-div', options);
+		function myUpdateFunction(event) {
+			let code = Blockly.JavaScript.workspaceToCode(workspace);
+			console.log(code.replace(/#/g, '\n'))
+			let commands = code.split('#').map(function (x) { return x.replace('\n', '') });
+			commands.pop();
+			console.log(commands)
+		}
+		workspace.addChangeListener(myUpdateFunction);
+	</script>
+</body>
+
+</html>
